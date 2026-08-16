@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.sohanemon.submap",
+  "name": "Omarchy Submap",
+  "version": "1.0.0",
+  "author": "sohanemon",
+  "description": "Submap toolkit for the Omarchy bar — ships a live submap indicator, with more submap features planned",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Submap.qml"
+  },
+  "barWidget": {
+    "displayName": "Submap",
+    "description": "Flags the active Hyprland submap as --NAME--, hidden when no submap is active",
+    "category": "Compositor",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
