@@ -16,6 +16,6 @@
     "description": "Flags the active Hyprland submap as --NAME--, hidden when no submap is active",
     "category": "Compositor",
     "allowMultiple": false,
-    "defaultSection": "right"
+    "defaultSection": "left"
   }
 }
