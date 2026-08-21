@@ -11,6 +11,15 @@ BarWidget {
   // NOTE: Empty value signals the root keymap, so it also encodes the hidden state.
   property string submap: ""
 
+  // INFO: Submap names are user config tokens arriving verbatim over IPC, and
+  // the shared WidgetButton label runs Qt's default Text.AutoText. Any "<tag"
+  // sequence in the name parses as rich text there, letting a crafted name
+  // make the shell process fetch file:// resources. Stripping "<" makes Qt's
+  // rich-text detector unable to fire, so the name renders verbatim.
+  function plainName(name) {
+    return String(name || "").replace(/</g, "")
+  }
+
   Connections {
     target: Hyprland
     function onRawEvent(event) {
@@ -41,7 +50,7 @@ BarWidget {
     anchors.fill: parent
     bar: root.bar
     // INFO: Uppercase flag reads as a mode label, not a raw config token.
-    text: "--" + root.submap.toUpperCase() + "--"
+    text: "--" + root.plainName(root.submap).toUpperCase() + "--"
     // NOTE: Urgent accent flags the active mode; the widget is not a click target.
     active: true
     interactive: false
