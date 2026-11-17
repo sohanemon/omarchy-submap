@@ -16,7 +16,7 @@ The indicator subscribes to Hyprland's `submap` IPC event for zero-latency updat
 omarchy plugin add https://github.com/sohanemon/omarchy-submap.git --enable
 ```
 
-Pick a bar section when prompted (it defaults to `left`, next to the workspaces). You can move it later with:
+Pick a bar section when prompted (it defaults to `right`, alongside the status indicators). The label uses the bar's theme-aware foreground with a softer treatment. You can move it later with:
 
 ```bash
 omarchy bar move io.github.sohanemon.submap --section center

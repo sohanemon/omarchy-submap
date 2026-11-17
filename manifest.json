@@ -13,9 +13,9 @@
   },
   "barWidget": {
     "displayName": "Submap",
-    "description": "Flags the active Hyprland submap as --NAME--, hidden when no submap is active",
+    "description": "Shows the active Hyprland submap in a compact theme-aware badge",
     "category": "Compositor",
     "allowMultiple": false,
-    "defaultSection": "left"
+    "defaultSection": "right"
   }
 }
